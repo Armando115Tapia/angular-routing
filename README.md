@@ -1,5 +1,14 @@
 # Descripción del proyecto 
 
+Para crear el proyecto se utilizo el siguiente comando
+
+```javascript
+ng new angular-routing
+```
+o si prefieres puedes clonarlo y luego ejecutar en el directorio raiz
+```javascritpt
+npm install
+```
 Se tiene los siguientes componentes y subcomponentes
 
   * Componente a (comp-a)
