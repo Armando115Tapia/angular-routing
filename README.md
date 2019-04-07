@@ -1,3 +1,48 @@
+# Descripción del proyecto 
+
+Se tiene los siguientes componentes y subcomponentes
+
+  * Componente a (comp-a)
+    * Subcomponente a (sub-a)
+    * Subcomponente b (sub-b)
+    * Subcomponente c (sub-c)
+  * Componente b (comp-b)
+  * Componente c (comp-c)
+
+Para crear los componentes se usa los siguientes comandos (desde la terminal):
+```javascript
+ng g c comp-a --spec=false
+ng g c comp-b --spec=false
+ng g c comp-c --spec=false
+```
+
+Para crear los subcomponentes se usa los siguientes comandos (desde la terminal)  
+nota: primero crear los compontentes
+```javascript
+ ng g c comp-a/sub-a --spec=false
+ ng g c comp-a/sub-b --spec=false
+ ng g c comp-a/sub-c --spec=false
+```
+
+COnfiguración de las rutas para que sean subcomponentes
+```javascript
+// app-routing.module
+// url -> compa/suba
+{path: 'compa', component: CompAComponent, children: [
+    {path: 'suba', component: SubAComponent},
+    {path: 'subb', component: SubBComponent},
+    {path: 'subc', component: SubCComponent}
+  ]},
+```
+### Estas pueden ser accedidas directamente, sin necesidad de colocarlas dentro de un children 
+Para acceder a los componentes hijos en el html debe contener el tag router-outlet
+```html
+<!-- comp-a.component.html-->
+<p>
+  comp-a works!
+</p>
+<router-outlet></router-outlet>
+```
 # AngularRouting
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
@@ -25,49 +70,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-# Descripción del proyecto 
-
-Se tiene 3 componentes 
-
-  * Componente a (comp-a)
-    * Subcomponente a (sub-a)
-    * Subcomponente b (sub-b)
-    * Subcomponente c (sub-c)
-  * Componente b (comp-b)
-  * Componente c (comp-c)
-
-Para crear los componentes se usa los siguientes comandos:
-```javascript
-ng g c comp-a --spec=false
-ng g c comp-b --spec=false
-ng g c comp-c --spec=false
-```
-
-Para crear los subcomponentes se usa los siguientes comandos  
-nota: primero crear los compontentes
-```javascript
- ng g c comp-a/sub-a --spec=false
- ng g c comp-a/sub-b --spec=false
- ng g c comp-a/sub-c --spec=false
-```
-
-COnfiguración de las rutas para que sean subcomponentes
-```javascript
-// app-routing.module
-// url -> compa/suba
-{path: 'compa', component: CompAComponent, children: [
-    {path: 'suba', component: SubAComponent},
-    {path: 'subb', component: SubBComponent},
-    {path: 'subc', component: SubCComponent}
-  ]},
-```
-### Estas pueden ser accedidas directamente, sin necesidad de colocarlas dentro de un children 
-Para acceder a los componentes hijos en el html debe contener el tag router-outlet
-```html
-<!-- comp-a.component.html-->
-<p>
-  comp-a works!
-</p>
-<router-outlet></router-outlet>
-```
