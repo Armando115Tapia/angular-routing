@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { CompAComponent } from './comp-a/comp-a.component';
 import { CompBComponent } from './comp-b/comp-b.component';
 import { CompCComponent } from './comp-c/comp-c.component';
+import { SubAComponent } from './comp-a/sub-a/sub-a.component';
+import { SubBComponent } from './comp-a/sub-b/sub-b.component';
+import { SubCComponent } from './comp-a/sub-c/sub-c.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompAComponent,
     CompBComponent,
-    CompCComponent
+    CompCComponent,
+    SubAComponent,
+    SubBComponent,
+    SubCComponent
   ],
   imports: [
     BrowserModule,
