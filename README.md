@@ -1,11 +1,11 @@
 # Descripción del proyecto 
 
-Para crear el proyecto se utilizo el siguiente comando
+Para crear el proyecto se utilizó el siguiente comando
 
 ```javascript
 ng new angular-routing
 ```
-o si prefieres puedes clonarlo y luego ejecutar en el directorio raiz
+o si prefieres puedes clonarlo y luego ejecutar el siguiente comando (en el directorio raiz).
 ```javascritpt
 npm install
 ```
@@ -18,14 +18,14 @@ Se tiene los siguientes componentes y subcomponentes
   * Componente b (comp-b)
   * Componente c (comp-c)
 
-Para crear los componentes se usa los siguientes comandos (desde la terminal):
+Para crear los componentes se uso los siguientes comandos (desde la terminal):
 ```javascript
 ng g c comp-a --spec=false
 ng g c comp-b --spec=false
 ng g c comp-c --spec=false
 ```
 
-Para crear los subcomponentes se usa los siguientes comandos (desde la terminal)  
+Para crear los subcomponentes se uso los siguientes comandos (desde la terminal)  
 nota: primero crear los compontentes
 ```javascript
  ng g c comp-a/sub-a --spec=false
@@ -33,7 +33,7 @@ nota: primero crear los compontentes
  ng g c comp-a/sub-c --spec=false
 ```
 
-COnfiguración de las rutas para que sean subcomponentes
+Configuración de las rutas para que sean subcomponentes
 ```javascript
 // app-routing.module
 // url -> compa/suba
